@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:background="@color/black"
+        android:id="@+id/memeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/memeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/memeImageView"
+        app:layout_constraintRight_toRightOf="@id/memeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toRightOf="@id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/memeImageView">
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:onClick="likeMeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:padding="0dp"
+            android:src="@drawable/like_outline" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="1.8"
+            android:shadowDy="1.5"
+            android:shadowRadius="2"
+            android:id="@+id/likesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingBottom="24dp"
+            android:text="Like" />
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:onClick="saveMeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:padding="0dp"
+            android:src="@drawable/save_outline" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="1.8"
+            android:shadowDy="1.5"
+            android:shadowRadius="2"
+            android:id="@+id/saveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingBottom="24dp"
+            android:text="Save" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:onClick="shareMeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:padding="0dp"
+            android:src="@drawable/share" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="1.8"
+            android:shadowDy="1.5"
+            android:shadowRadius="2"
+            android:id="@+id/shareTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingBottom="24dp"
+            android:text="Share" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
